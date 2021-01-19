@@ -37,7 +37,7 @@ class ClienteDAO extends DataBase
     public function selectById($cliente)
     {
         $pdo = DataBase::connect();
-        $sql = $pdo->prepare("SELECT * FROM cliente WHERE IFNULL(fdeletado, 0) =0 AND id = ?");
+        $sql = $pdo->prepare("SELECT id, nome, cpf, telefone, datanascimento, datacriacao FROM cliente WHERE IFNULL(fdeletado, 0) =0 AND id = ?");
         $sql->bindValue(1, $cliente->getId());
         $sql->execute();
 
@@ -45,7 +45,7 @@ class ClienteDAO extends DataBase
         while ($obj = $sql->fetch(PDO::FETCH_OBJ)) {
             $clientes[] = $obj;
         }
-        return json_encode($clientes);
+        return ($clientes);
     }
 
     public function filterByCliente($filter)

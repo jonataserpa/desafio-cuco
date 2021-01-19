@@ -119,7 +119,7 @@ class ClienteController
         $validatorCliente = new ValidatorCliente();
         $cliente = new Cliente();
         $cliente = $this->clienteService->getCliente($validatorCliente->findByIdCliente($dataJSON, $data));
-        return $Cliente;
+        return $cliente;
     }
     
     public function index()

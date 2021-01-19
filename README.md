@@ -41,7 +41,7 @@
 
 # API ROTAS EXEMPLO DE REQUISIÇÃO - POSTMAN
 
-    Observação: Por questões de segurança foi adotado que todas as requisições tivessem o verbo POST para inserção, atualização, e deleção,
+    Observação: Por questões de segurança foi adotado que todas as requisições tivessem o verbo POST para inserção, atualização, deleção, findById
     	adicionando um parametro action no corpo da requisição, o mesmo poderia ser no cabecalho, apenas a consulta o GET.
 
     "Segue os exemplos arquivo JSON a seguir": url padrao -> http://localhost/clientes
@@ -68,6 +68,11 @@
     	{
     		"id": "15",
     		"action" : "delete"
+    	}
+    5 - Para a pesquisa de um cliente especifico : id -> POST -> localhost/clientes
+    	{
+    		"id": "14",
+    		"action" : "findById"
     	}
 
 Obrigado.
