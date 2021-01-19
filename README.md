@@ -37,7 +37,6 @@
     2 - verificar se não tem outro projeto controlando o .htaccess,
     	caso esteja remover, depende dele para controle das rotas corretamente.
     3 - Rodar o script do banco que segue junto com o projeto cliente.sql no banco de dados cuco.
-    4 - o envio do email é necessario configurar o email e senha no metodo envia_email() na linha 200,
     4 - Pronto se tudo estiver correto apenas acessar http://localhost/ sera redirecionao a rota para index.php, basta cadastrar e realizar as operações basicas.
 
 # API ROTAS EXEMPLO DE REQUISIÇÃO - POSTMAN
